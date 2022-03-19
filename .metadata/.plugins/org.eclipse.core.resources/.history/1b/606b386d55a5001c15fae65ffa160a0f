@@ -1,0 +1,18 @@
+package Assignment_5Q2;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class CalculatorTest {
+
+	@Test
+	public void test() {
+		Calculator cal=new Calculator();
+		assertEquals(9,cal.add(4, 5));
+		assertEquals(7,cal.subtract(14, 7));
+		assertEquals(5,cal.divide(25, 5));
+		assertEquals(45,cal.multiply(9, 5));
+	}
+
+}

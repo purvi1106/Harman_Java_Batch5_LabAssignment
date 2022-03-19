@@ -1,0 +1,16 @@
+package Assignment_5Q2;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class CalculationTesting {
+
+	@Test
+public void test() {
+		CalculationTesting cal=new CalculationTesting();
+		add.assertEquals()
+		
+	}
+
+}

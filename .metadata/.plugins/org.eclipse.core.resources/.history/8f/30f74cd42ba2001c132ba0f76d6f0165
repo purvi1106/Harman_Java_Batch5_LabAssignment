@@ -1,0 +1,17 @@
+package Assignment_3;
+import java.io.*;
+
+public class Player {
+	public static void main(String[] args) {
+	try {
+		//BufferedReader br=new BufferedReader(new FileReader(new File("C:\\Users\\LENOVO\\Downloads\\virat.jpg")));
+		FileInputStream fis=new FileInputStream("C:\\Users\\LENOVO\\Downloads\\virat.jpg");
+		int i;
+		while ((i=fis.read())!=-1) {
+			System.out.println((char)i);
+		} 
+	}catch(Exception e){
+		e.printStackTrace();
+	}
+  }
+}

@@ -1,0 +1,10 @@
+package Assignment_5Q2;
+
+public class SlowApi {{
+	for(int i=0;i<100000000;i++) {
+		for(int j=0;j<14577899;j++) {
+			
+		}
+	}
+}
+}

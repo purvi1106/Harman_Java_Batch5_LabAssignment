@@ -1,0 +1,26 @@
+package Assignment_2;
+
+// ASSIGNMENT 2 QUESTION 2
+
+public class bookStoreApp {
+	
+  
+}
+class Book {
+	String bookTitle;
+	String author;
+	String ISBN;
+	int numofCopies;
+ public Book(String bookTitle,String author,String ISBN,int numofCopies ) {
+	 this.bookTitle=bookTitle;
+	 this.author=author;
+	 this.ISBN=ISBN;
+	 this.numofCopies=numofCopies;
+ }
+  public void display() {
+	  System.out.println("Title- "+this.bookTitle+"Author- "+this.author+"ISBN- "+this.ISBN+"Quantity- "+this.numofCopies);
+   }
+}
+ class bookStore {
+
+}

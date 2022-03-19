@@ -1,0 +1,22 @@
+package Assignment_4;
+
+import java.io.*;
+
+
+public class Frequency {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try {
+			//BufferedReader br = new BufferedReader(new FileReader(new File("story.txt")));
+			FileReader fr = new FileReader("story.txt");
+			int i;
+			while ((i = fr.read()) != -1) {
+				System.out.println((char) i);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+}

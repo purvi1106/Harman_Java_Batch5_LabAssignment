@@ -1,0 +1,15 @@
+package Assignment_5Q2;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class CalculatorTest {
+
+	@Test
+	public void test() {
+		CalculatorTest cal=new CalculatorTest();
+		int res=cal.add(12,45);
+	}
+
+}

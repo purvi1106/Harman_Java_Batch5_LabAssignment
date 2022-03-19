@@ -1,0 +1,27 @@
+package Assignment_5Q2;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class SlowApiTest {
+
+	@Test (timeout=1)
+	public void testPerformance() {
+	SlowApi sa=new SlowApi("harsh","Student",2003);
+	SlowApi sa2=new SlowApi("harsh","Student",2003);
+	SlowApi sa3=new SlowApi("harsh","Student",2003);
+	SlowApi sa4=new SlowApi("harsh","Student",2003);
+	SlowApi sa5=new SlowApi("harsh","Student",2003);
+	sa.getName();
+	sa.getAbout();
+	sa.getBirthYear();
+	sa2.getName();
+	sa2.getAbout();
+	sa2.getBirthYear();
+	sa3.getName();
+	sa3.getAbout();
+	sa3.getBirthYear();
+	}
+
+}

@@ -1,0 +1,10 @@
+package Assignment_4;
+
+public class BookCollectionMain {
+	 public static void main(String[] args) {
+		 String[] arr={"Book1","Book2","Book3","Book4"};
+		 BookCollection bc=new BookCollection("Author1", arr);
+		 bc.toString();
+		System.out.println( bc.hasBook("Book2"));
+	 }
+}

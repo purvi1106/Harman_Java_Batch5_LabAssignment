@@ -1,0 +1,31 @@
+package Assignment_4;
+
+import java.io.*;
+
+import java.util.*;
+
+public class DataFile {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ArrayList<Float> arr=new ArrayList<Float>();
+		try {
+			File f=new File("data.txt");
+			String path=f.getAbsolutePath();
+			BufferedReader br = new BufferedReader(new FileReader(path));
+			float i;
+			while ((i = br.read()) != -1f) {
+				arr.add(i);
+			}
+			float greatest=arr.get(0);
+			int index=1;
+			for(Float temp:arr) {
+				if(arr.get(index)> greatest) {
+					greatest=arr.get(index);
+				}
+			}
+			System.out.println("Greatest Number is:"+greatest);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

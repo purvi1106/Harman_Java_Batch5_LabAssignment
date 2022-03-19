@@ -1,0 +1,18 @@
+package Assignment_4;
+
+import java.io.*;
+
+import java.util.*;
+
+public class DataFile {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try {
+
+			BufferedReader br = new BufferedReader(new FileReader(new File("data")));
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

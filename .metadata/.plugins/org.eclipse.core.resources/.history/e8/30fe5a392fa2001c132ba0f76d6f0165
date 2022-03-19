@@ -1,0 +1,131 @@
+package Assignment_2;
+
+// ASSIGNMENT 2 QUESTION 2
+
+//Book Store App Class
+public class BookStoreApp {
+	public static void main(String[] args) {
+		BookStore bs=new BookStore();
+		bs.display();
+		bs.sell("Book2", 5);
+		bs.display();
+	}
+
+}
+//Book Store Class
+
+class BookStore {
+	private Book[] books;
+
+	public Book[] getBooks() {
+		return books;
+	}
+
+	public void setBooks(Book[] books) {
+		this.books = books;
+	}
+
+	public BookStore() {
+		this.books = new Book[10];
+		assignBooks();
+	}
+
+	// Assign method to put books in array
+	private void assignBooks() {
+		// TODO Auto-generated method stub
+		books[0] = new Book("Book1","Author 1","1234",50);
+		books[1] = new Book("Book2","Author 2","12345",150);
+		books[2] = new Book("Book3","Author 3","123456",250);
+		books[3] = new Book("Book4","Author 4","1234567",350);
+		books[4] = new Book("Book5","Author 5","12345678",450);
+	}
+
+//Sell Method
+	void sell(String bookTitle, int numofCopies) {
+		boolean check = false;
+		for (int i = 0; i < 10; i++) {
+			if (books[i].getBookTitle() == bookTitle) {
+				books[i].setNumofCopies(books[i].getNumofCopies()-numofCopies);
+				check = true;
+			}
+		}
+		if (!check) {
+			System.out.println("Book Not Found..");
+		}
+	}
+
+//Order Method
+	void order(String ISBN, int numofCopies) {
+		boolean check = false;
+		for (int i = 0; i < 10; i++) {
+			if (books[i].getISBN() == ISBN) {
+				books[i].setNumofCopies(books[i].getNumofCopies() + numofCopies);
+				check = true;
+			}
+		}
+		if (!check) {
+			int len = books.length;
+			books[len + 1] = new Book(ISBN, null, null, numofCopies);
+		}
+	}
+void display() {
+	for(Book temp:this.getBooks()) {
+		temp.display();
+	}
+}
+}
+
+// Book Class
+	class Book {
+		String bookTitle;
+		String author;
+		String ISBN;
+		int numofCopies;
+
+		// getter and setter methods
+		public String getBookTitle() {
+			return bookTitle;
+		}
+
+		public void setBookTitle(String bookTitle) {
+			this.bookTitle = bookTitle;
+		}
+
+		public String getAuthor() {
+			return author;
+		}
+
+		public void setAuthor(String author) {
+			this.author = author;
+		}
+
+		public String getISBN() {
+			return ISBN;
+		}
+
+		public void setISBN(String iSBN) {
+			ISBN = iSBN;
+		}
+
+		public int getNumofCopies() {
+			return numofCopies;
+		}
+
+		public void setNumofCopies(int numofCopies) {
+			this.numofCopies = numofCopies;
+		}
+
+		// Constructor
+		public Book(String bookTitle, String author, String ISBN, int numofCopies) {
+			this.bookTitle = bookTitle;
+			this.author = author;
+			this.ISBN = ISBN;
+			this.numofCopies = numofCopies;
+		}
+
+		// display method
+		public void display() {
+			System.out.println("Title- " + this.bookTitle + "Author- " + this.author + "ISBN- " + this.ISBN
+					+ "Quantity- " + this.numofCopies);
+		}
+	}

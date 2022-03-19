@@ -1,0 +1,19 @@
+package Assignment_4;
+
+import java.io.*;
+
+import java.util.*;
+
+public class DataFile {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try {
+			File f=new File("data.txt");
+			String path=f.getAbsolutePath();
+			BufferedReader br = new BufferedReader(new FileReader(path));
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

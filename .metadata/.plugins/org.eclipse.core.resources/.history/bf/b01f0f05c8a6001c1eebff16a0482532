@@ -1,0 +1,35 @@
+package Assignment_4;
+
+import java.util.*;
+import java.io.*;
+public class BookCollection implements Comparator<Book>{
+			 private String ownerName;
+			private List<Book> books;
+			
+			public BookCollection(String ownerName) 
+			{
+				this.ownerName = ownerName;
+				this.books=new ArrayList<Book>();
+				init();
+			}
+			private void init() {
+				books.add(new Book(1, "Java", "Author1"));
+				books.add(new Book(123, "STL in C++", "Author2"));
+				books.add(new Book(178, "Introduction to Python", "Author3"));
+			}
+			
+			public boolean hasBook(Book b) {
+				int index=Collections.binarySearch(books, b,new Book());
+			
+			
+			public void sortBook() {
+				//sort it
+				
+			}
+	 }
+			@Override
+			public int compare(Book o1, Book o2) {
+				// TODO Auto-generated method stub
+				return 0;
+			}
+}

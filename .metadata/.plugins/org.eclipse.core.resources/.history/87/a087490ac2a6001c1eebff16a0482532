@@ -1,0 +1,17 @@
+package Assignment_4;
+
+public class BookCollectionMain {
+	 public static void main(String[] args) {
+		 String[] arr={"Book1","Book2","Book7","Book4"};
+		 BookCollection bc=new BookCollection("Author1", arr);
+		 bc.display();
+		System.out.println( bc.hasBook("Book2"));
+		
+		arr=bc.sortBooks(arr);
+		System.out.print("Sorted Books= ");
+		/*
+		 * for(String temp:arr) { System.out.print(temp+" "); }
+		 */
+		bc.display();
+	 }
+}

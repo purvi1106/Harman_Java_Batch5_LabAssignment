@@ -1,0 +1,29 @@
+package Assignment_5Q2;
+
+public class SlowApi {
+	private String name;
+	private String about;
+	private int birthYear;s
+	
+	public SlowApi(String name, String about, int birthYear) {
+		this.name = name;
+		this.about = about;
+		this.birthYear = birthYear;
+	}
+
+	SlowApi(){
+		
+	}
+	public String getName() {
+		return name;
+	}
+
+	public String getAbout() {
+		return about;
+	}
+
+	public int getBirthYear() {
+		return birthYear;
+	}
+
+}
