@@ -6,7 +6,10 @@ public class BookController {
 	public static void main(String[] args) {
 		BookService dao = new BookServiceImp();
 		List<Book> books = dao.getAllBooks();
-		books.forEach(b -> System.out.println(b));
+		for(Book temp:books){
+			System.out.println(temp.toString());
+		}
+			   // dao.deleteBook(126);
 	}
 
 }
